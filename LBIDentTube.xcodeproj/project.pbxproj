@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEB7F8BF1AA1F0CC00C49039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8BE1AA1F0CC00C49039 /* main.m */; };
+		AEB7F8C21AA1F0CC00C49039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8C11AA1F0CC00C49039 /* AppDelegate.m */; };
+		AEB7F8C51AA1F0CC00C49039 /* LBIDentTube.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8C31AA1F0CC00C49039 /* LBIDentTube.xcdatamodeld */; };
+		AEB7F8CB1AA1F0CC00C49039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB7F8C91AA1F0CC00C49039 /* Main.storyboard */; };
+		AEB7F8CD1AA1F0CC00C49039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB7F8CC1AA1F0CC00C49039 /* Images.xcassets */; };
+		AEB7F8D01AA1F0CC00C49039 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7F8CE1AA1F0CC00C49039 /* LaunchScreen.xib */; };
+		AEB7F8DC1AA1F0CC00C49039 /* LBIDentTubeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8DB1AA1F0CC00C49039 /* LBIDentTubeTests.m */; };
+		AEB7F8EC1AA1F57C00C49039 /* VideoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8EB1AA1F57C00C49039 /* VideoListTableViewController.m */; };
+		AEB7F8F21AA1F99500C49039 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8F11AA1F99500C49039 /* VideoCell.m */; };
+		AEB7F8F61AA1FB9B00C49039 /* VideoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8F51AA1FB9B00C49039 /* VideoImporter.m */; };
+		AEB7F8F91AA1FCA500C49039 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8F81AA1FCA500C49039 /* Utils.m */; };
+		AEB7F8FE1AA1FE7900C49039 /* CoreDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F8FD1AA1FE7900C49039 /* CoreDataUtils.m */; };
+		AEB7F9021AA2075F00C49039 /* Video+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F9011AA2075F00C49039 /* Video+Create.m */; };
+		AEB7F9051AA2376900C49039 /* NSSet+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F9041AA2376900C49039 /* NSSet+Utils.m */; };
+		AEB7F9081AA3527F00C49039 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F9071AA3527F00C49039 /* Video.m */; };
+		AEB7F90B1AA358DE00C49039 /* VideoInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F90A1AA358DE00C49039 /* VideoInfoViewController.m */; };
+		AEB7F90E1AA3B3AD00C49039 /* RelatedVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F90D1AA3B3AD00C49039 /* RelatedVideosViewController.m */; };
+		AEB7F9141AA3B7D600C49039 /* RelatedVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7F9131AA3B7D600C49039 /* RelatedVideoCell.m */; };
+		F7668572C61DAB05265E61D2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D516A9A27B1AD73E3DAE98 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEB7F8D61AA1F0CC00C49039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEB7F8B11AA1F0CC00C49039 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEB7F8B81AA1F0CC00C49039;
+			remoteInfo = LBIDentTube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1848FF29B680A36278A2D017 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		23D516A9A27B1AD73E3DAE98 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB7F8B91AA1F0CC00C49039 /* LBIDentTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBIDentTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB7F8BD1AA1F0CC00C49039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB7F8BE1AA1F0CC00C49039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEB7F8C01AA1F0CC00C49039 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEB7F8C11AA1F0CC00C49039 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEB7F8C41AA1F0CC00C49039 /* LBIDentTube.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LBIDentTube.xcdatamodel; sourceTree = "<group>"; };
+		AEB7F8CA1AA1F0CC00C49039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEB7F8CC1AA1F0CC00C49039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AEB7F8CF1AA1F0CC00C49039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AEB7F8D51AA1F0CC00C49039 /* LBIDentTubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBIDentTubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB7F8DA1AA1F0CC00C49039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB7F8DB1AA1F0CC00C49039 /* LBIDentTubeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBIDentTubeTests.m; sourceTree = "<group>"; };
+		AEB7F8EA1AA1F57C00C49039 /* VideoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListTableViewController.h; sourceTree = "<group>"; };
+		AEB7F8EB1AA1F57C00C49039 /* VideoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListTableViewController.m; sourceTree = "<group>"; };
+		AEB7F8F01AA1F99500C49039 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		AEB7F8F11AA1F99500C49039 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		AEB7F8F41AA1FB9B00C49039 /* VideoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoImporter.h; sourceTree = "<group>"; };
+		AEB7F8F51AA1FB9B00C49039 /* VideoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoImporter.m; sourceTree = "<group>"; };
+		AEB7F8F71AA1FCA500C49039 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		AEB7F8F81AA1FCA500C49039 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		AEB7F8FB1AA1FDBF00C49039 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		AEB7F8FC1AA1FE7900C49039 /* CoreDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataUtils.h; sourceTree = "<group>"; };
+		AEB7F8FD1AA1FE7900C49039 /* CoreDataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataUtils.m; sourceTree = "<group>"; };
+		AEB7F9001AA2075F00C49039 /* Video+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Video+Create.h"; sourceTree = "<group>"; };
+		AEB7F9011AA2075F00C49039 /* Video+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Video+Create.m"; sourceTree = "<group>"; };
+		AEB7F9031AA2376900C49039 /* NSSet+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Utils.h"; sourceTree = "<group>"; };
+		AEB7F9041AA2376900C49039 /* NSSet+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Utils.m"; sourceTree = "<group>"; };
+		AEB7F9061AA3527F00C49039 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		AEB7F9071AA3527F00C49039 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		AEB7F9091AA358DE00C49039 /* VideoInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoInfoViewController.h; sourceTree = "<group>"; };
+		AEB7F90A1AA358DE00C49039 /* VideoInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoInfoViewController.m; sourceTree = "<group>"; };
+		AEB7F90C1AA3B3AD00C49039 /* RelatedVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedVideosViewController.h; sourceTree = "<group>"; };
+		AEB7F90D1AA3B3AD00C49039 /* RelatedVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedVideosViewController.m; sourceTree = "<group>"; };
+		AEB7F9121AA3B7D600C49039 /* RelatedVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedVideoCell.h; sourceTree = "<group>"; };
+		AEB7F9131AA3B7D600C49039 /* RelatedVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedVideoCell.m; sourceTree = "<group>"; };
+		E483B8473C0AC689450292D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEB7F8B61AA1F0CC00C49039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7668572C61DAB05265E61D2 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB7F8D21AA1F0CC00C49039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F0291BD87BCF8A6C8ED5B43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23D516A9A27B1AD73E3DAE98 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FBD0E5F2DF04F27DFD1CE60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1848FF29B680A36278A2D017 /* Pods.debug.xcconfig */,
+				E483B8473C0AC689450292D2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEB7F8B01AA1F0CC00C49039 = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8BB1AA1F0CC00C49039 /* LBIDentTube */,
+				AEB7F8D81AA1F0CC00C49039 /* LBIDentTubeTests */,
+				AEB7F8BA1AA1F0CC00C49039 /* Products */,
+				9FBD0E5F2DF04F27DFD1CE60 /* Pods */,
+				7F0291BD87BCF8A6C8ED5B43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEB7F8BA1AA1F0CC00C49039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8B91AA1F0CC00C49039 /* LBIDentTube.app */,
+				AEB7F8D51AA1F0CC00C49039 /* LBIDentTubeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEB7F8BB1AA1F0CC00C49039 /* LBIDentTube */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8C01AA1F0CC00C49039 /* AppDelegate.h */,
+				AEB7F8C11AA1F0CC00C49039 /* AppDelegate.m */,
+				AEB7F8FF1AA203D500C49039 /* Utils */,
+				AEB7F9161AA3CC8500C49039 /* Importer */,
+				AEB7F8E51AA1F49A00C49039 /* CoreData */,
+				AEB7F8E91AA1F50F00C49039 /* View */,
+				AEB7F8F31AA1FB1E00C49039 /* Controller */,
+				AEB7F8BC1AA1F0CC00C49039 /* Supporting Files */,
+			);
+			path = LBIDentTube;
+			sourceTree = "<group>";
+		};
+		AEB7F8BC1AA1F0CC00C49039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8BD1AA1F0CC00C49039 /* Info.plist */,
+				AEB7F8BE1AA1F0CC00C49039 /* main.m */,
+				AEB7F8FB1AA1FDBF00C49039 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEB7F8D81AA1F0CC00C49039 /* LBIDentTubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8DB1AA1F0CC00C49039 /* LBIDentTubeTests.m */,
+				AEB7F8D91AA1F0CC00C49039 /* Supporting Files */,
+			);
+			path = LBIDentTubeTests;
+			sourceTree = "<group>";
+		};
+		AEB7F8D91AA1F0CC00C49039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8DA1AA1F0CC00C49039 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEB7F8E51AA1F49A00C49039 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8C31AA1F0CC00C49039 /* LBIDentTube.xcdatamodeld */,
+				AEB7F9061AA3527F00C49039 /* Video.h */,
+				AEB7F9071AA3527F00C49039 /* Video.m */,
+				AEB7F9001AA2075F00C49039 /* Video+Create.h */,
+				AEB7F9011AA2075F00C49039 /* Video+Create.m */,
+				AEB7F8FC1AA1FE7900C49039 /* CoreDataUtils.h */,
+				AEB7F8FD1AA1FE7900C49039 /* CoreDataUtils.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		AEB7F8E91AA1F50F00C49039 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8CC1AA1F0CC00C49039 /* Images.xcassets */,
+				AEB7F8C91AA1F0CC00C49039 /* Main.storyboard */,
+				AEB7F8CE1AA1F0CC00C49039 /* LaunchScreen.xib */,
+				AEB7F9151AA3CC5700C49039 /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AEB7F8F31AA1FB1E00C49039 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8EA1AA1F57C00C49039 /* VideoListTableViewController.h */,
+				AEB7F8EB1AA1F57C00C49039 /* VideoListTableViewController.m */,
+				AEB7F9091AA358DE00C49039 /* VideoInfoViewController.h */,
+				AEB7F90A1AA358DE00C49039 /* VideoInfoViewController.m */,
+				AEB7F90C1AA3B3AD00C49039 /* RelatedVideosViewController.h */,
+				AEB7F90D1AA3B3AD00C49039 /* RelatedVideosViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AEB7F8FF1AA203D500C49039 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8F71AA1FCA500C49039 /* Utils.h */,
+				AEB7F8F81AA1FCA500C49039 /* Utils.m */,
+				AEB7F9031AA2376900C49039 /* NSSet+Utils.h */,
+				AEB7F9041AA2376900C49039 /* NSSet+Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		AEB7F9151AA3CC5700C49039 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8F01AA1F99500C49039 /* VideoCell.h */,
+				AEB7F8F11AA1F99500C49039 /* VideoCell.m */,
+				AEB7F9121AA3B7D600C49039 /* RelatedVideoCell.h */,
+				AEB7F9131AA3B7D600C49039 /* RelatedVideoCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AEB7F9161AA3CC8500C49039 /* Importer */ = {
+			isa = PBXGroup;
+			children = (
+				AEB7F8F41AA1FB9B00C49039 /* VideoImporter.h */,
+				AEB7F8F51AA1FB9B00C49039 /* VideoImporter.m */,
+			);
+			name = Importer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEB7F8B81AA1F0CC00C49039 /* LBIDentTube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB7F8DF1AA1F0CC00C49039 /* Build configuration list for PBXNativeTarget "LBIDentTube" */;
+			buildPhases = (
+				036D193FC76D04FD7EF30246 /* Check Pods Manifest.lock */,
+				AEB7F8B51AA1F0CC00C49039 /* Sources */,
+				AEB7F8B61AA1F0CC00C49039 /* Frameworks */,
+				AEB7F8B71AA1F0CC00C49039 /* Resources */,
+				7A99913E1EA928D5251BC010 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBIDentTube;
+			productName = LBIDentTube;
+			productReference = AEB7F8B91AA1F0CC00C49039 /* LBIDentTube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEB7F8D41AA1F0CC00C49039 /* LBIDentTubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB7F8E21AA1F0CC00C49039 /* Build configuration list for PBXNativeTarget "LBIDentTubeTests" */;
+			buildPhases = (
+				AEB7F8D11AA1F0CC00C49039 /* Sources */,
+				AEB7F8D21AA1F0CC00C49039 /* Frameworks */,
+				AEB7F8D31AA1F0CC00C49039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB7F8D71AA1F0CC00C49039 /* PBXTargetDependency */,
+			);
+			name = LBIDentTubeTests;
+			productName = LBIDentTubeTests;
+			productReference = AEB7F8D51AA1F0CC00C49039 /* LBIDentTubeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEB7F8B11AA1F0CC00C49039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = leonardobarros;
+				TargetAttributes = {
+					AEB7F8B81AA1F0CC00C49039 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AEB7F8D41AA1F0CC00C49039 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AEB7F8B81AA1F0CC00C49039;
+					};
+				};
+			};
+			buildConfigurationList = AEB7F8B41AA1F0CC00C49039 /* Build configuration list for PBXProject "LBIDentTube" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEB7F8B01AA1F0CC00C49039;
+			productRefGroup = AEB7F8BA1AA1F0CC00C49039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEB7F8B81AA1F0CC00C49039 /* LBIDentTube */,
+				AEB7F8D41AA1F0CC00C49039 /* LBIDentTubeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEB7F8B71AA1F0CC00C49039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB7F8CB1AA1F0CC00C49039 /* Main.storyboard in Resources */,
+				AEB7F8D01AA1F0CC00C49039 /* LaunchScreen.xib in Resources */,
+				AEB7F8CD1AA1F0CC00C49039 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB7F8D31AA1F0CC00C49039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		036D193FC76D04FD7EF30246 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A99913E1EA928D5251BC010 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEB7F8B51AA1F0CC00C49039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB7F9141AA3B7D600C49039 /* RelatedVideoCell.m in Sources */,
+				AEB7F8C21AA1F0CC00C49039 /* AppDelegate.m in Sources */,
+				AEB7F8FE1AA1FE7900C49039 /* CoreDataUtils.m in Sources */,
+				AEB7F8F21AA1F99500C49039 /* VideoCell.m in Sources */,
+				AEB7F9021AA2075F00C49039 /* Video+Create.m in Sources */,
+				AEB7F8BF1AA1F0CC00C49039 /* main.m in Sources */,
+				AEB7F90E1AA3B3AD00C49039 /* RelatedVideosViewController.m in Sources */,
+				AEB7F8F91AA1FCA500C49039 /* Utils.m in Sources */,
+				AEB7F90B1AA358DE00C49039 /* VideoInfoViewController.m in Sources */,
+				AEB7F8EC1AA1F57C00C49039 /* VideoListTableViewController.m in Sources */,
+				AEB7F8F61AA1FB9B00C49039 /* VideoImporter.m in Sources */,
+				AEB7F9081AA3527F00C49039 /* Video.m in Sources */,
+				AEB7F9051AA2376900C49039 /* NSSet+Utils.m in Sources */,
+				AEB7F8C51AA1F0CC00C49039 /* LBIDentTube.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB7F8D11AA1F0CC00C49039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB7F8DC1AA1F0CC00C49039 /* LBIDentTubeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEB7F8D71AA1F0CC00C49039 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEB7F8B81AA1F0CC00C49039 /* LBIDentTube */;
+			targetProxy = AEB7F8D61AA1F0CC00C49039 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEB7F8C91AA1F0CC00C49039 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEB7F8CA1AA1F0CC00C49039 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEB7F8CE1AA1F0CC00C49039 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEB7F8CF1AA1F0CC00C49039 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEB7F8DD1AA1F0CC00C49039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEB7F8DE1AA1F0CC00C49039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEB7F8E01AA1F0CC00C49039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1848FF29B680A36278A2D017 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LBIDentTube/PrefixHeader.pch;
+				INFOPLIST_FILE = LBIDentTube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEB7F8E11AA1F0CC00C49039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E483B8473C0AC689450292D2 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LBIDentTube/PrefixHeader.pch;
+				INFOPLIST_FILE = LBIDentTube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AEB7F8E31AA1F0CC00C49039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LBIDentTubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBIDentTube.app/LBIDentTube";
+			};
+			name = Debug;
+		};
+		AEB7F8E41AA1F0CC00C49039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LBIDentTubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBIDentTube.app/LBIDentTube";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEB7F8B41AA1F0CC00C49039 /* Build configuration list for PBXProject "LBIDentTube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB7F8DD1AA1F0CC00C49039 /* Debug */,
+				AEB7F8DE1AA1F0CC00C49039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB7F8DF1AA1F0CC00C49039 /* Build configuration list for PBXNativeTarget "LBIDentTube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB7F8E01AA1F0CC00C49039 /* Debug */,
+				AEB7F8E11AA1F0CC00C49039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB7F8E21AA1F0CC00C49039 /* Build configuration list for PBXNativeTarget "LBIDentTubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB7F8E31AA1F0CC00C49039 /* Debug */,
+				AEB7F8E41AA1F0CC00C49039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEB7F8C31AA1F0CC00C49039 /* LBIDentTube.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEB7F8C41AA1F0CC00C49039 /* LBIDentTube.xcdatamodel */,
+			);
+			currentVersion = AEB7F8C41AA1F0CC00C49039 /* LBIDentTube.xcdatamodel */;
+			path = LBIDentTube.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AEB7F8B11AA1F0CC00C49039 /* Project object */;
+}
