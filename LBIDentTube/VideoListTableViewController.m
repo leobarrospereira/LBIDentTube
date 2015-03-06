@@ -13,6 +13,7 @@
 #import "NSSet+Utils.h"
 #import "SVProgressHUD.h"
 #import "VideoInfoViewController.h"
+#import "TLYShyNavBarManager.h"
 
 @interface VideoListTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -36,6 +37,8 @@ dispatch_queue_t queueLoadThumb;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.shyNavBarManager.scrollView = self.tableView;
     
     // add model changes notification
     [[NSNotificationCenter defaultCenter] addObserver:self

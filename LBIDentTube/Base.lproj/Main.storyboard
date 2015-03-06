@@ -224,6 +224,7 @@
                         <outlet property="descriptionHeightConstraint" destination="a0R-8l-blu" id="GIB-rS-osp"/>
                         <outlet property="descriptionTextView" destination="jhY-MN-1ov" id="FRt-7I-IWw"/>
                         <outlet property="durationLabel" destination="Kt6-Vt-456" id="eKp-38-aYD"/>
+                        <outlet property="scrollView" destination="PKV-ui-BkX" id="2gg-J1-ghM"/>
                         <outlet property="thumbImageView" destination="BOS-PQ-nLH" id="1Lr-94-NL6"/>
                         <outlet property="titleLabel" destination="6Pu-3c-zf1" id="ijd-uk-3qg"/>
                     </connections>
@@ -287,11 +288,14 @@
                                     <outlet property="delegate" destination="Mp2-g8-QZ3" id="oep-0q-kKO"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClO-aS-uVV" userLabel="Line - View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClO-aS-uVV" userLabel="Line - View">
                                 <rect key="frame" x="16" y="2" width="584" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="SI3-F1-wd5"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vídeos Relacionados" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je9-Bx-WnH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vídeos Relacionados" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je9-Bx-WnH">
                                 <rect key="frame" x="16" y="8" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,10 +304,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="11V-kE-Fxu" firstAttribute="top" secondItem="Je9-Bx-WnH" secondAttribute="bottom" constant="-2" id="7R5-w0-kfv"/>
                             <constraint firstItem="Ihf-fc-G2k" firstAttribute="top" secondItem="11V-kE-Fxu" secondAttribute="bottom" id="9jh-b7-9BM"/>
                             <constraint firstItem="11V-kE-Fxu" firstAttribute="top" secondItem="HxI-Fy-Gq5" secondAttribute="bottom" constant="27" id="G7D-gE-kNO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="11V-kE-Fxu" secondAttribute="trailing" constant="-16" id="Nm8-IE-v4h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ClO-aS-uVV" secondAttribute="trailing" constant="-16" id="Nqs-c3-Z1K"/>
+                            <constraint firstItem="ClO-aS-uVV" firstAttribute="top" secondItem="HxI-Fy-Gq5" secondAttribute="bottom" constant="2" id="QJJ-Jz-1N2"/>
+                            <constraint firstItem="Je9-Bx-WnH" firstAttribute="leading" secondItem="sQS-yd-IGp" secondAttribute="leadingMargin" id="Sca-7B-7g3"/>
+                            <constraint firstItem="ClO-aS-uVV" firstAttribute="leading" secondItem="sQS-yd-IGp" secondAttribute="leadingMargin" id="XTe-Vb-vOB"/>
+                            <constraint firstItem="Je9-Bx-WnH" firstAttribute="top" secondItem="HxI-Fy-Gq5" secondAttribute="bottom" constant="8" id="ZIf-yW-aJi"/>
+                            <constraint firstItem="Je9-Bx-WnH" firstAttribute="top" secondItem="ClO-aS-uVV" secondAttribute="bottom" constant="5" id="gul-Bu-mz5"/>
                             <constraint firstItem="11V-kE-Fxu" firstAttribute="leading" secondItem="sQS-yd-IGp" secondAttribute="leadingMargin" constant="-16" id="h9p-jQ-ica"/>
+                            <constraint firstItem="Je9-Bx-WnH" firstAttribute="trailing" secondItem="sQS-yd-IGp" secondAttribute="trailingMargin" id="pqr-dp-5O8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

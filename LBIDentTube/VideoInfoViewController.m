@@ -9,6 +9,7 @@
 #import "VideoInfoViewController.h"
 #import "XCDYouTubeVideoPlayerViewController.h"
 #import "RelatedVideosViewController.h"
+#import "TLYShyNavBarManager.h"
 
 @interface VideoInfoViewController ()
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -31,6 +33,11 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Info Vídeo";
+    
+    self.shyNavBarManager.scrollView = self.scrollView;
+    
+    // Necessary to fix content size on rotate device.
+    self.descriptionTextView.layoutManager.allowsNonContiguousLayout = NO;
     
     if (self.video) {
         self.titleLabel.text = self.video.title;
