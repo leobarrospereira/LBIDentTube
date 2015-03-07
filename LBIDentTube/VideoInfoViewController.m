@@ -9,7 +9,6 @@
 #import "VideoInfoViewController.h"
 #import "XCDYouTubeVideoPlayerViewController.h"
 #import "RelatedVideosViewController.h"
-#import "TLYShyNavBarManager.h"
 
 @interface VideoInfoViewController ()
 
@@ -33,8 +32,6 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Info Vídeo";
-    
-    self.shyNavBarManager.scrollView = self.scrollView;
     
     // Necessary to fix content size on rotate device.
     self.descriptionTextView.layoutManager.allowsNonContiguousLayout = NO;

@@ -9,12 +9,12 @@
 #import "RelatedVideosViewController.h"
 #import "RelatedVideoCell.h"
 #import "XCDYouTubeVideoPlayerViewController.h"
+#import "UIImageView+WebCache.h"
 
 @interface RelatedVideosViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *relatedVideos;
-@property (nonatomic, strong) NSCache *thumbnailCache;
 
 @end
 
@@ -22,18 +22,11 @@
 @implementation RelatedVideosViewController
 
 
-#pragma mark - Queue
-
-dispatch_queue_t queueLoadThumb;
-
-
 #pragma mark - View Life Cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    queueLoadThumb = dispatch_queue_create("RelatedVideosViewController.LoadThumb", NULL);
 }
 
 - (NSArray *)relatedVideos
@@ -45,21 +38,6 @@ dispatch_queue_t queueLoadThumb;
     _relatedVideos = [NSArray new];
     
     return _relatedVideos;
-}
-
-
-#pragma mark - Cache
-
-- (NSCache *)thumbnailCache
-{
-    if (_thumbnailCache) {
-        return _thumbnailCache;
-    }
-    
-    _thumbnailCache = [[NSCache alloc] init];
-    [_thumbnailCache setCountLimit:60];
-    
-    return _thumbnailCache;
 }
 
 
@@ -121,44 +99,19 @@ dispatch_queue_t queueLoadThumb;
     
     cell.titleLabel.text = [[videoDict objectForKey:@"title"] objectForKey:@"$t"];
     
-    cell.thumbnailImageView.image = [self.thumbnailCache objectForKey:indexPath];
     
-    if (!cell.thumbnailImageView.image) {
-        
-        // Load thumbnail async
-        dispatch_async(queueLoadThumb, ^{
-            
-            // Thumbnail
-            NSDictionary *mediaGroup = [videoDict objectForKey:@"media$group"];
-            NSArray *thumbs = [mediaGroup objectForKey:@"media$thumbnail"];
-            NSString *thumbUrl;
-            for (NSDictionary *thumb in thumbs) {
-                thumbUrl = [thumb objectForKey:@"url"];
-                break;
-            }
-            
-            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:thumbUrl]]];
-            
-            if (image) {
-                [self.thumbnailCache setObject:image forKey:indexPath];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    RelatedVideoCell *updateCell = (RelatedVideoCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-                    
-                    [UIView transitionWithView:updateCell
-                                      duration:0.2f
-                                       options:UIViewAnimationOptionTransitionCrossDissolve
-                                    animations:^{
-                                        
-                                        updateCell.thumbnailImageView.image = image;
-                                        
-                                    } completion:NULL];
-                });
-            }
-            
-        });
+    // Thumbnail
+    cell.thumbnailImageView.image = nil;
+    
+    NSDictionary *mediaGroup = [videoDict objectForKey:@"media$group"];
+    NSArray *thumbs = [mediaGroup objectForKey:@"media$thumbnail"];
+    NSString *thumbUrl;
+    for (NSDictionary *thumb in thumbs) {
+        thumbUrl = [thumb objectForKey:@"url"];
+        break;
     }
+    
+    [cell.thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:thumbUrl]];
     
     return cell;
 }

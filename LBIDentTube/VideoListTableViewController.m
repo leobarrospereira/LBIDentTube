@@ -13,23 +13,17 @@
 #import "NSSet+Utils.h"
 #import "SVProgressHUD.h"
 #import "VideoInfoViewController.h"
-#import "TLYShyNavBarManager.h"
+#import "UIImageView+WebCache.h"
 
 @interface VideoListTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
-@property (nonatomic, strong) NSCache *thumbnailCache;
 
 @end
 
 
 @implementation VideoListTableViewController
-
-
-#pragma mark - Queue
-
-dispatch_queue_t queueLoadThumb;
 
 
 #pragma mark - View Life Cycle
@@ -38,15 +32,11 @@ dispatch_queue_t queueLoadThumb;
 {
     [super viewDidLoad];
     
-    self.shyNavBarManager.scrollView = self.tableView;
-    
     // add model changes notification
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleDataModelChange:)
                                                  name:NSManagedObjectContextObjectsDidChangeNotification
                                                object:[CoreDataUtils mainMoc]];
-    
-    queueLoadThumb = dispatch_queue_create("VideoListTableViewController.LoadThumb", NULL);
 }
 
 
@@ -62,21 +52,6 @@ dispatch_queue_t queueLoadThumb;
             [SVProgressHUD dismiss];
         }];
     }
-}
-
-
-#pragma mark - Cache
-
-- (NSCache *)thumbnailCache
-{
-    if (_thumbnailCache) {
-        return _thumbnailCache;
-    }
-    
-    _thumbnailCache = [[NSCache alloc] init];
-    [_thumbnailCache setCountLimit:60];
-    
-    return _thumbnailCache;
 }
 
 
@@ -128,7 +103,6 @@ dispatch_queue_t queueLoadThumb;
         [insertedObjects containsMemberOfClass:[Video class]] ||
         [deletedObjects containsMemberOfClass:[Video class]]) {
         
-        [self.thumbnailCache removeAllObjects];
         [self.fetchedResultsController performFetch:nil];
         [self.tableView reloadData];
     }
@@ -159,34 +133,8 @@ dispatch_queue_t queueLoadThumb;
     cell.titleLabel.text = video.title;
     cell.dateLabel.text = [self.dateFormatter stringFromDate:video.publishedDate];
     
-    cell.thumbnailImageView.image = [self.thumbnailCache objectForKey:indexPath];
-    
-    if (!cell.thumbnailImageView.image) {
-        
-        // Load thumbnail async
-        dispatch_async(queueLoadThumb, ^{
-            
-            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:video.thumbnailUrl]]];
-            
-            if (image) {
-                [self.thumbnailCache setObject:image forKey:indexPath];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    VideoCell *updateCell = (VideoCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-                    
-                    [UIView transitionWithView:updateCell
-                                      duration:0.2f
-                                       options:UIViewAnimationOptionTransitionCrossDissolve
-                                    animations:^{
-                                        
-                                        updateCell.thumbnailImageView.image = image;
-                                        
-                                    } completion:NULL];
-                });
-            }
-        });
-    }
+    cell.thumbnailImageView.image = nil;
+    [cell.thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:video.thumbnailUrl]];
     
     return cell;
 }
